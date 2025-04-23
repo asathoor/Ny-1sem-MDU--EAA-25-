@@ -1,0 +1,71 @@
+/**
+Stilark: hifiStyles
+Formål: HTML og CSS styletile
+*/
+
+/* variabler */
+:root {
+    /* designlinje: farve-triade plus lys og mørke */
+    --violet: #911d91;
+    --graes: #91911d;
+    --blaaGroen: #1d9191;
+    --moerk: #000;
+    --lys: #fff;
+}
+
+/* generelt */
+body {
+    background-color: var(--lys);
+    color: var(--moerk);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: medium;
+}
+
+/* farveeksempler */
+#farverne {
+    text-align: center;
+}
+
+#farverne article {
+    /* flexbox */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.farver {
+    border: 1px solid var(--moerk);
+    width: 125px;
+    height: 125px;
+    margin: 8px;
+}
+
+#f_1 {
+    background-color: var(--blaaGroen);
+}
+
+#f_2 {
+    background-color: var(--graes);
+}
+
+#f_3 {
+    background-color: var(--violet);
+}
+
+#f_4 {
+    background-color: var(--lys);
+}
+
+#f_5 {
+    background-color: var(--moerk);
+}
+
+/* Overskrifter */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-align: center;
+}

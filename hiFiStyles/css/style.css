@@ -69,3 +69,35 @@ h5,
 h6 {
     text-align: center;
 }
+
+p {
+    max-width: 53ch; /* ch = antal tegn pr. linje */
+    margin: auto;
+    padding: 8px;
+}
+
+/* farvede baggrunde med tekst */
+.graes {
+    background-color: var(--graes);
+    color: var(--lys);
+}
+
+.violet {
+    background-color: var(--violet);
+    color: var(--lys);
+}
+
+.blaaGroen {
+    background-color: var(--blaaGroen);
+    color: var(--lys);
+}
+
+.moerk {
+    background-color: var(--moerk);
+    color: var(--lys);
+}
+
+.lys {
+    background-color: var(--lys);
+    color: var(--moerk);
+}

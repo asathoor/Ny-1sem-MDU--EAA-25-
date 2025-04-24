@@ -3,22 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HiFiStyles: PROJEKT-NAVN</title>
+    <title>Designsystem: Landingpage</title>
+    <link rel="stylesheet" href="css/meyer.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <h1>(h1) Designsystem</h1>
+    <header class="graes">
+        <h1>Designsystem: Landingpage</h1>
     </header>
 
     <main>
 
+        <section id="intro">
+
+            <h2>Introduktion: Designsystemet og din landingpage</h2>
+
+            <p>Designsystemet skaber de CSS og HTML "byggeklodser" du kan bruge, når dit design skal implementeres. Designsystemet skal udvikles før du begynder at bygge din landingpage. På denne måde kan du udvikle et konsistent design.</p>
+
+            <p>Når designsystemet er klar bliver det let at bygge websider ud fra wireframes.</p>
+
+            <p>I HTML head sekstionen skal du tilføje:
+
+            <pre>
+&lt;link rel="stylesheet" href="css/style.css"&gt;
+            </pre>
+
+            <p>Med afsæt i dine wireframes kan du nu bygge en landingpage og undersider ved at bruge klasserne fra dit designsystem:</p>
+
+            <pre>
+&lt;section class="violet centrer"&gt;
+... Resultat ...
+&lt;/section&gt;
+            </pre>
+
+            <section class="violet centrer">... Resultat ...</section>
+
+
+
+        </section>
+
+        
+
+        <section id="designsystem">
+            <h2>Designsystem: Landingpage</h2>
+        </section>
+
+        <hr>
+
         <section id="farverne">
 
-            <h2>(h2) Farver</h2>
+            <h2>Farver</h2>
 
             <article>
-                <!-- magisk formular: div.farve#f_$*5-->
+                <!-- magisk Emmett formular: div.farve#f_$*5-->
                 <div class="farver" id="f_1"></div>
                 <div class="farver" id="f_2"></div>
                 <div class="farver" id="f_3"></div>
@@ -27,22 +64,37 @@
             </article>
         </section>
 
+        <hr>
+
+        <section id="teksturer">
+            <h2>Teksturer</h2>
+            <p>Teksturer er billeder, der gentages som lagte mønstre i baggrunden af elementer. De kan fremstilles i GIMP og Photoshop.</p>
+
+
+        </section>
+
+        <hr>
+
+        <!-- Fonte/skrifttyper-->
         <section id="fonts">
             <h2>Overskrifter</h2>
 
 
-            <h1>(h1) Lorem ipsum sit</h1>
-            <h2>(h2)Lorem ipsum sit</h2>
-            <h3>(h3)Lorem ipsum sit</h3>
-            <h4>(h4)Lorem ipsum sit</h4>
-            <h5>(h5)Lorem ipsum sit</h5>
-            <h6>(h6)Lorem ipsum sit</h6>
+            <h1>(h1) Reserveret til sitets titel</h1>
+            <h2>(h2) Overskrifter til afsnit</h2>
+            <h3>(h3) Overskrifter til under-afsnit</h3>
+            <h4>(h4) Under-under-afsnit</h4>
+            <h5>(h5) Under-under-under-afsnit</h5>
+            <h6>(h6) Under-under-under-under-afsnit</h6>
 
             <h2>Brødtekst</h2>
 
             <h3>Afsnit</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam modi alias deserunt odit ratione similique consequatur odio, beatae praesentium corporis voluptates, asperiores quisquam repellendus quibusdam facilis, dicta id excepturi incidunt!</p>
 
+            <!-- Hvilke andre muligheder er der for at opmarkere tekst? Tilføj nogen eksempler! -->
+
+            <!-- Tekst og baggrund: læsevenlige farvekontraster. -->
             <h2>Farvede baggrunde med tekst</h2>
 
             <h3>Class: .graes</h3>
@@ -60,12 +112,33 @@
 
             <h3>Class: .lys</h3>
             <p class="lys">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati, esse cumque! Voluptatem et ipsum ipsa molestias natus nemo necessitatibus reiciendis, sunt doloribus dolor voluptate sapiente perspiciatis? Asperiores dolorem molestias porro.</p>
+
+            <!-- fortsæt med farvekombinationer. Hvornår er farvekontrasten god? -->
         </section>
+
+        <hr>
+
+        <!-- Hero sektioner -->
         <section id="illustrationer">
+            <h2>Hero Image</h2>
+            <p>Her mangler vi et godt dansk begreb. Heltebillede virker lidt oldnordisk. Hero images er store og går typisk i fuld bredde.</p>
+
+            <!-- Herobilledet indsættes som baggrundsbillede i CSS, -->
             <aside class="hero">
+                <!-- Indholdet her lægger sig hen over billedet. Positioner det med CSS. -->
                 <h3>Hero image</h3>
             </aside>
+
+        </section>
+
+        <hr>
+
+            <!-- Flexbox kolonner og tekster på farvet grund. Læg mærke til at man kan bruge flere klasser på et element. Klasser adskilles blot af et mellemrum. -->
             <section class="flex">
+                <div>
+                    <h2>Flexbox til "kolonner"</h2>
+                    <p>Flere classes er i brug på elementerne. Nu bliver designsystemet for alvor praktisk.</p>
+                </div>
                 <aside class="w33 violet">
                     <h3>Class: violet w33</h3>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium dicta dignissimos illo nam numquam officiis dolor aut commodi et consectetur? Ex alias maxime amet in quas laborum iste impedit? Minus!</p>
@@ -79,42 +152,168 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor eligendi, atque, beatae quod aspernatur culpa veritatis quas sit molestias quibusdam similique officiis libero enim rerum eum et nostrum commodi quae!</p>
                 </aside>  
             </section>
-            <section id="cards">
-                <h2>Cards</h2>
 
+            <hr>
+
+            <!-- Cards: overskrift, billede og CTA (call to action) knapper. -->
+            <section id="cards">
+                <h2>Flexbox I: Card komponenter</h2>
+
+                <p>NB: responsiv flex skalerer; men på mindre devices kan det være bedre at lægge elementerne i en bunke.</p>
+
+                <!-- Flexbox I: bevarer kolonnerne uanset browservinduets bredde. Kan blive upraktisk. En løsning kan være Flexbox II. S.d. -->
                 <div class="flex">
                     <aside class="card">
                         <h3>Card class: flex</h3>
-                        <img src="https://multimusen.dk/wp-content/uploads/DALL%C2%B7E-2024-10-18-10.53.58-An-anime-style-scene-featuring-a-multimedia-designer-character.-The-character-is-a-young-stylish-individual-sitting-at-a-desk-with-a-laptop-tablet-1-1.webp" alt="Multimediedesigner tegnet af ChatGPT">
+
+                        <!-- img width = 100% tricket -->
+                        <img src="https://multimusen.dk/wp-content/uploads/wizard-pc-04-1.jpeg" alt="Multimediedesigner tegnet af ChatGPT">
                         <p>I CSS'en er billedernes bredde = 100%. De tilpasser sig responsivt.</p>
-                        <button class="blaaGroen">CTA</button>
+
+                        <!-- Knapper: CTA -->
+                        <div class="knap-centrer">
+                            <button class="violet">CTA</button>
+                        </div>
                     </aside>
                     <aside class="card">
                         <h3>Card Overskrift</h3>
-                        <img src="https://multimusen.dk/wp-content/uploads/DALL%C2%B7E-2024-10-18-10.53.58-An-anime-style-scene-featuring-a-multimedia-designer-character.-The-character-is-a-young-stylish-individual-sitting-at-a-desk-with-a-laptop-tablet-1-1.webp" alt="Multimediedesigner tegnet af ChatGPT">
+                        <img src="https://multimusen.dk/wp-content/uploads/wizard-pc-04-1.jpeg" alt="Multimediedesigner tegnet af ChatGPT">
                         <p>I CSS'en er billedernes bredde = 100%. De tilpasser sig responsivt.</p>
-                        <button class="lys">CTA</button>
+                        
+                        <!-- Knapper: CTA -->
+                        <div class="knap-centrer">
+                            <button class="violet">CTA</button>
+                        </div>
                     </aside>
                     <aside class="card">
                         <h3>Card Overskrift</h3>
-                        <img src="https://multimusen.dk/wp-content/uploads/DALL%C2%B7E-2024-10-18-10.53.58-An-anime-style-scene-featuring-a-multimedia-designer-character.-The-character-is-a-young-stylish-individual-sitting-at-a-desk-with-a-laptop-tablet-1-1.webp" alt="Multimediedesigner tegnet af ChatGPT">
+                        <img src="https://multimusen.dk/wp-content/uploads/wizard-pc-04-1.jpeg" alt="Multimediedesigner tegnet af ChatGPT">
                         <p>I CSS'en er billedernes bredde = 100%. De tilpasser sig responsivt.</p>
-                        <button class="violet">CTA</button>
+                        
+                        <!-- Knapper: CTA -->
+                        <div class="knap-centrer">
+                            <button class="violet">CTA</button>
+                        </div>
                     </aside>
                     <aside class="card">
                         <h3>Card Overskrift</h3>
-                        <img src="https://multimusen.dk/wp-content/uploads/DALL%C2%B7E-2024-10-18-10.53.58-An-anime-style-scene-featuring-a-multimedia-designer-character.-The-character-is-a-young-stylish-individual-sitting-at-a-desk-with-a-laptop-tablet-1-1.webp" alt="Multimediedesigner tegnet af ChatGPT">
+                        <img src="https://multimusen.dk/wp-content/uploads/wizard-pc-04-1.jpeg" alt="Multimediedesigner tegnet af ChatGPT">
                         <p>I CSS'en er billedernes bredde = 100%. De tilpasser sig responsivt.</p>
-                        <button class="moerk">CTA</button>
+                        
+                        <!-- Knapper: CTA -->
+                        <div class="knap-centrer">
+                            <button class="violet">CTA</button>
+                        </div>
                     </aside>
                 </div>
             </section>
-            <section id="teksturer"></section>
+
+            <hr>
+
+            <!-- Flexbox II: "Stakken" - lægger "kasser" (container-elementer) med indhold i en bunke elementerne i en bunke.  -->
+            <section id="cards">
+                <h2>Flexbox II: Responsivt design</h2>
+
+                <p>Denne komponent lægger elementerne i en bunke på mindre skærme, og bevarer kolonner på større. Dette kræver @media regler i CSS.</p>
+
+                <!-- Flex2 har som udgangspunkt en bredde på 100%. Det ser godt ud på helt små skærme. På større skærme virker kolonner bedre. Her får du brug for @media regler. -->
+                <div class="flex2">
+                    <aside class="card">
+                        <h3>Card class: flex2</h3>
+                        <img src="https://multimusen.dk/wp-content/uploads/wizard-pc-04-1.jpeg" alt="Multimediedesigner tegnet af ChatGPT">
+                        <p>I CSS'en er billedernes bredde = 100%. De tilpasser sig responsivt.</p>
+                        
+                        <!-- Knapper: CTA -->
+                        <div class="knap-centrer">
+                            <button class="violet">CTA</button>
+                        </div>
+                    </aside>
+                    <aside class="card">
+                        <h3>Card Overskrift</h3>
+                        <img src="https://multimusen.dk/wp-content/uploads/wizard-pc-04-1.jpeg" alt="Multimediedesigner tegnet af ChatGPT">
+                        <p>I CSS'en er billedernes bredde = 100%. De tilpasser sig responsivt.</p>
+                        
+                        <!-- Knapper: CTA -->
+                        <div class="knap-centrer">
+                            <button class="violet">CTA</button>
+                        </div>
+                    </aside>
+                    <aside class="card">
+                        <h3>Card Overskrift</h3>
+                        <img src="https://multimusen.dk/wp-content/uploads/wizard-pc-04-1.jpeg" alt="Multimediedesigner tegnet af ChatGPT">
+                        <p>I CSS'en er billedernes bredde = 100%. De tilpasser sig responsivt.</p>
+                        
+                        <!-- Knapper: CTA -->
+                        <div class="knap-centrer">
+                            <button class="violet">CTA</button>
+                        </div>
+                    </aside>
+                    <aside class="card">
+                        <h3>Card Overskrift</h3>
+                        <img src="https://multimusen.dk/wp-content/uploads/wizard-pc-04-1.jpeg" alt="Multimediedesigner tegnet af ChatGPT">
+                        <p>I CSS'en er billedernes bredde = 100%. De tilpasser sig responsivt.</p>
+                        
+                        <!-- Knapper: CTA -->
+                        <div class="knap-centrer">
+                            <button class="violet">CTA</button>
+                        </div>
+                    </aside>
+                </div>
+            </section>
+
+            <hr>
+
+            <!-- === Komponenter === -->
+
+            <section id="komponenter">
+                <h2>Komponenter</h2>
+                <p>Komponenter kan defineres som "designmønstre", der kan genbruges. Her er et par eksempler.</p>
+            </section>
+
+            <hr>
+
+            <!-- Komponent: Billede med overskrift og CTA -->
+
+            <!--    
+                    Sådan:
+                    Her lægges baggrundsbilledet ind på section u CSS.
+                    Knap og tekster kan skrives i "kassen".
+                    De vises over billedet.
+            -->
+            <section id="billedeMedCTA">
+                <h2>Komponent: Billede med CTA</h2>
+                <aside id="knapPaaBillede">
+                    <div class="knap-centrer">
+                        <button class="graes">CTA</button>
+                    </div>
+                </aside>
+            </section>
+
+            <hr>
+
+            <!-- Komponent: billede og tekst -->
+            <section>
+                <h2>Komponent: Billede og tekst</h2>
+
+                <article  id="billedeOgTekst" class="flex">
+                    <div>
+                        <h2 class="hoejre">Vir prudens</h2>
+                        <p class="hoejre">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                    <div>
+                        <img src="https://multimusen.dk/wp-content/uploads/wizard-pc-04-1.jpeg" alt="Multimediedesigner">
+                    </div>
+                </article>
+            </section>
+
+            <hr>
         </section>
     </main>
 
-    <footer>
-
+    <footer class="moerk">
+        &copy; Per Thykjær Jensen, 2025 <br>
+        Multimediedesigneruddannelsen <br>
+        Erhvervsakademi Aarhus
     </footer>
 </body>
 </html>

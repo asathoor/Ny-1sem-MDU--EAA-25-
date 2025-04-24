@@ -1,16 +1,39 @@
 /**
-Stilark: hifiStyles
-Formål: HTML og CSS styletile
+Stilark: Designsystem til en Landingpage
+Formål: Introduktion til systematisk design med CSS.
+*/
+
+/* Google fonts */
+/* Tip: brug importregler frem for <link> */
+@import url('https://fonts.googleapis.com/css2?family=Cal+Sans&family=Ribeye&display=swap');
+
+/*
+Sådan bruges Cal Sans skrifttyperne:
+
+.cal-sans-regular {
+  font-family: "Cal Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.ribeye-regular {
+  font-family: "Ribeye", serif;
+  font-weight: 400;
+  font-style: normal;
+}
 */
 
 /* variabler */
 :root {
     /* designlinje: farve-triade plus lys og mørke */
     --violet: #911d91;
-    --graes: #91911d;
+    --graes: #25861a;
     --blaaGroen: #1d9191;
     --moerk: #000;
     --lys: #fff;
+
+    /* knappernes bredde */
+    --knapBred: 125px;
 }
 
 * {
@@ -18,14 +41,25 @@ Formål: HTML og CSS styletile
     padding: 0px;
 }
 
-/* generelt */
+/* Generelt */
 body {
     background-color: var(--lys);
     color: var(--moerk);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: medium;
+    font-size: large;
 }
 
+footer {
+    height: 15vh;
+    padding-top: 6vh;
+    text-align: center;
+    margin-top: 76px;
+}
+
+header {
+    padding-top: 12vh;
+    min-height: 24vh;
+}
 
 
 /* farveeksempler */
@@ -45,6 +79,8 @@ body {
     width: 125px;
     height: 125px;
     margin: 8px;
+    border-radius: 50%;
+
 }
 
 #f_1 {
@@ -79,12 +115,66 @@ h6 {
     margin-bottom: 20px;
 }
 
+/* h1: reserveres til webstedets titel */
+h1 {
+    font-family: "Ribeye", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: xx-large;
+}
+
+h2 {
+    font-family: "Cal Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: larger;
+    color: var(--violet);
+}
+
+h3 {
+    font-size: large;
+    font-weight: bold;
+}
+
+
+/* h2: overskrifter ved afsnit */
+h2 {
+    margin-top: 10vh;
+}
+
 p {
     max-width: 53ch; /* ch = antal tegn pr. linje */
     margin: auto;
     margin-top: 4px;
     margin-bottom: 4px;
     padding: 8px;
+}
+
+pre {
+    font-family: 'Courier New', Courier, monospace;
+    max-width: 53ch; /* ch = antal tegn pr. linje */
+    margin: auto;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    padding: 8px;
+}
+
+hr {
+    margin-bottom: 43px;
+    margin-top: 43px;
+}
+
+/* Tekst justering */
+.centrer {
+    text-align: center;
+}
+
+.venstre {
+    text-align: left;
+}
+
+.hoejre {
+    text-align: right;
 }
 
 /* farvede baggrunde med tekst */
@@ -117,7 +207,9 @@ p {
 .hero {
     width: 100%;
     height: 100vh;
-    background-image: url('https://multimusen.dk/wp-content/uploads/image-1-2.png');
+    background-image: url('https://multimusen.dk/wp-content/uploads/wizard-pc-04-1.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
     color: var(--lys);
 }
 
@@ -129,7 +221,10 @@ img {
 .flex {
     display: flex;
     justify-content: space-between;
+    gap: 8px;
 }
+
+/* Layout */
 
 /* bredder */
 .w25 {
@@ -154,12 +249,86 @@ img {
 
 /* Knapper */
 button {
-    min-width: 125px;
+    min-width: var(--knapBred);
     padding: 4px;
-    margin: auto;
-    margin-top: 4px;
-    margin-bottom: 4px;
+    border-radius: 12px;
 }
 
-/* Responsive regler */
+.knap-centrer {
+    width: var(--knapBred);
+    margin: auto;
+}
 
+
+/* === Komponenter === */
+
+/* Billede med CTA */
+#knapPaaBillede {
+    padding: 10vh;
+    height: 45vh;
+    background-image: url('https://multimusen.dk/wp-content/uploads/wizard-pc-04-1.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#knapPaaBillede h3 {
+    position: relative;
+    bottom: 0px;
+    color: var(--lys);
+}
+
+/* Tekst og billede (a la WordPress) */
+#billedeOgTekst h2 {
+    margin-top: 0px; /* fjerner whitespace øverst */
+}
+
+#billedeOgTekst div:first-child {
+    padding-left: 8px;
+    width: 30%;
+}
+
+#billedeOgTekst div:last-child {
+    width:50%;
+    padding-right: 8px;
+}
+
+
+/* === Responsivt Webdesign === */
+
+/* W3 Schools giver disse eksempler på typiske breakpoints 
+
+Extra small devices (phones, 600px and down)
+@media only screen and (max-width: 600px) {...}
+
+Small devices (portrait tablets and large phones, 600px and up)
+@media only screen and (min-width: 600px) {...}
+
+Medium devices (landscape tablets, 768px and up)
+@media only screen and (min-width: 768px) {...}
+
+Large devices (laptops/desktops, 992px and up)
+@media only screen and (min-width: 992px) {...}
+
+/* Extra large devices (large laptops and desktops, 1200px and up)
+@media only screen and (min-width: 1200px) {...}
+
+Placer de responsive regler i slutningen af din CSS. Fordi: det er den sidste regel som vinder i CSS.
+
+*/
+
+/* Responsiv: Tablets og opefter */
+
+/* mobiler mv. */
+@media only screen and (max-width: 600px) {
+    .flex2 {
+        display: block; /* block: lægger kasse-elementerne i en stak. */
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .flex2 {
+        display: flex; /* flex: laver kolonner af kasse-elementerne */
+    }
+}
+
+/* Tilføj selv de manglende breakpoints. Se hvordan de virker i developer tools. */

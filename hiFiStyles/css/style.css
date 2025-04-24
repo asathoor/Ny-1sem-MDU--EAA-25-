@@ -250,7 +250,7 @@ img {
 /* Knapper */
 button {
     min-width: var(--knapBred);
-    padding: 4px;
+    padding: 10px;
     border-radius: 12px;
 }
 

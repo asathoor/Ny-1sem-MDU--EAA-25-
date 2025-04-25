@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="da">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -45,7 +45,8 @@
         
 
         <section id="designsystem">
-            <h2>Designsystem: Landingpage</h2>
+            <h2>Designsystem: en Landingpage</h2>
+            <p>Her vises de centrale designelementer til en landingpage til siden ...</p>
         </section>
 
 
@@ -53,14 +54,15 @@
 
             <h2>Farver</h2>
 
-            <article>
-                <!-- magisk Emmett formular: div.farve#f_$*5-->
-                <div class="farver" id="f_1"></div>
-                <div class="farver" id="f_2"></div>
-                <div class="farver" id="f_3"></div>
-                <div class="farver" id="f_4"></div>
-                <div class="farver" id="f_5"></div>
-            </article>
+            <p>Farver sættes med disse variabler:</p>
+
+            <aside>
+                <div class="graes farver">class="graes"</div>
+                <div class="violet farver">class="violet"</div>
+                <div class="blaaGroen farver">class="blaaGroen"</div>
+                <div class="moerk farver">class="moerk"</div>
+                <div class="lys farver">class="lys"</div>
+            </aside>
         </section>
 
 
@@ -68,6 +70,15 @@
             <h2>Teksturer</h2>
             <p>Teksturer er billeder, der gentages som lagte mønstre i baggrunden af elementer. De kan fremstilles i GIMP og Photoshop.</p>
 
+            <aside id="tekstur1" class="teksturer">
+                <h6>class=tekstur1</h6>
+            </aside>
+            <aside id="tekstur2" class="teksturer">
+                <h6>class=tekstur2</h6>
+            </aside>
+            <aside id="tekstur3" class="teksturer">
+                <h6>class=tekstur3</h6>
+            </aside> 
 
         </section>
 
@@ -116,6 +127,7 @@
 
         <!-- Hero sektioner -->
         <section id="illustrationer">
+
             <h2>Hero Image</h2>
             <p>Her mangler vi et godt dansk begreb. Heltebillede virker lidt oldnordisk. Hero images er store og går typisk i fuld bredde.</p>
 
@@ -127,28 +139,26 @@
 
         </section>
 
-
             <!-- Flexbox kolonner og tekster på farvet grund. Læg mærke til at man kan bruge flere klasser på et element. Klasser adskilles blot af et mellemrum. -->
-            <section class="flex">
-                <div>
-                    <h2>Flexbox til "kolonner"</h2>
-                    <p>Flere classes er i brug på elementerne. Nu bliver designsystemet for alvor praktisk.</p>
+            <section class="kolonner">
+                
+                <h2>Flexbox</h2>
+
+                <div class="flex">
+                    <aside class="w25 lys">
+                        <h2>Flexbox til "kolonner"</h2>
+                        <p>Flere classes er i brug på elementerne. Nu bliver designsystemet for alvor praktisk.</p>
+                    </aside>
+                    <aside class="w25 violet">
+                        <h3>Class: violet w25</h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium dicta dignissimos illo nam numquam officiis dolor aut commodi et consectetur? Ex alias maxime amet in quas laborum iste impedit? Minus!</p>
+                    </aside>
+                    <aside class="w25 graes">
+                        <h3>Class: graes</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis iusto laudantium a nisi veritatis porro velit delectus animi quidem excepturi! Quisquam itaque suscipit eaque eveniet explicabo cupiditate quaerat soluta deleniti!</p>
+                    </aside>
                 </div>
-                <aside class="w33 violet">
-                    <h3>Class: violet w33</h3>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium dicta dignissimos illo nam numquam officiis dolor aut commodi et consectetur? Ex alias maxime amet in quas laborum iste impedit? Minus!</p>
-                </aside>
-                <aside class="w33 graes">
-                    <h3>Class: graes w33</h3>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis iusto laudantium a nisi veritatis porro velit delectus animi quidem excepturi! Quisquam itaque suscipit eaque eveniet explicabo cupiditate quaerat soluta deleniti!</p>
-                </aside>
-                <aside class="w33 blaaGroen">
-                    <h3>Class: blaaGroen w33</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor eligendi, atque, beatae quod aspernatur culpa veritatis quas sit molestias quibusdam similique officiis libero enim rerum eum et nostrum commodi quae!</p>
-                </aside>  
             </section>
-
-
 
             <!-- Cards: overskrift, billede og CTA (call to action) knapper. -->
             <section id="cards">
@@ -206,10 +216,14 @@
 
 
             <!-- Flexbox II: "Stakken" - lægger "kasser" (container-elementer) med indhold i en bunke elementerne i en bunke.  -->
-            <section id="cards">
+            <section id="flexbox2">
                 <h2>Flexbox II: Responsivt design</h2>
 
-                <p>Denne komponent lægger elementerne i en bunke på mindre skærme, og bevarer kolonner på større. Dette kræver @media regler i CSS.</p>
+                <p>Klassen .flex2 lægger elementerne i en bunke på mindre skærme, og bevarer kolonner på større. Dette kræver @media regler i CSS.</p>
+
+                <pre>
+&lt;section class="flex2"&gt;&lt;/section&gt;
+                </pre>
 
                 <!-- Flex2 har som udgangspunkt en bredde på 100%. Det ser godt ud på helt små skærme. På større skærme virker kolonner bedre. Her får du brug for @media regler. -->
                 <div class="flex2">
@@ -279,30 +293,26 @@
                 <h2>Komponent: Billede med CTA</h2>
                 <aside id="knapPaaBillede">
                     <div class="knap-centrer">
-                        <button class="lys">CTA</button>
+                        <button class="graes">CTA</button>
                     </div>
                 </aside>
             </section>
-
-
 
             <!-- Komponent: billede og tekst -->
             <section>
                 <h2>Komponent: Billede og tekst</h2>
 
-                <article  id="billedeOgTekst" class="flex">
+                <article  id="billedeOgTekst" class="flex2">
                     <div>
-                        <h2 class="hoejre">Vir prudens</h2>
-                        <p class="hoejre">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <h2 class="venstre">Vir prudens</h2>
+                        <p class="venstre">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                     </div>
                     <div>
                         <img src="https://multimusen.dk/wp-content/uploads/wizard-pc-04-1.jpeg" alt="Multimediedesigner">
                     </div>
                 </article>
             </section>
-
-
-        </section>
+    
     </main>
 
     <footer class="moerk">

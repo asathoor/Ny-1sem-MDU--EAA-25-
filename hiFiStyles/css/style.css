@@ -3,6 +3,8 @@ Stilark: Designsystem til en Landingpage
 Formål: Introduktion til systematisk design med CSS.
 */
 
+/*  */
+
 /* Google fonts */
 /* Tip: brug importregler frem for <link> */
 @import url('https://fonts.googleapis.com/css2?family=Cal+Sans&family=Ribeye&display=swap');
@@ -27,7 +29,7 @@ Sådan bruges Cal Sans skrifttyperne:
 :root {
     /* designlinje: farve-triade plus lys og mørke */
     --violet: #911d91;
-    --graes: #25861a;
+    --graes: #47e935;
     --blaaGroen: #1d9191;
     --moerk: #000;
     --lys: #fff;
@@ -59,15 +61,17 @@ footer {
 header {
     padding-top: 12vh;
     min-height: 24vh;
+    background-image: url('https://multimusen.dk/wp-content/uploads/wizard-pc-04-1.jpeg');
+    background-repeat: no-repeat;
+    background-size:cover;
 }
-
 
 /* farveeksempler */
 #farverne {
     text-align: center;
 }
 
-#farverne article {
+#farverne aside {
     /* flexbox */
     display: flex;
     justify-content: center;
@@ -76,31 +80,10 @@ header {
 
 .farver {
     border: 1px solid var(--moerk);
-    width: 125px;
+    width: 15ch;
     height: 125px;
     margin: 8px;
-    border-radius: 50%;
-
-}
-
-#f_1 {
-    background-color: var(--blaaGroen);
-}
-
-#f_2 {
-    background-color: var(--graes);
-}
-
-#f_3 {
-    background-color: var(--violet);
-}
-
-#f_4 {
-    background-color: var(--lys);
-}
-
-#f_5 {
-    background-color: var(--moerk);
+    /* border-radius: 50%; */
 }
 
 /* Overskrifter */
@@ -152,11 +135,12 @@ p {
 
 pre {
     font-family: 'Courier New', Courier, monospace;
+    text-align: left;
     max-width: 53ch; /* ch = antal tegn pr. linje */
     margin: auto;
     margin-top: 4px;
     margin-bottom: 4px;
-    padding: 8px;
+
 }
 
 hr {
@@ -180,7 +164,7 @@ hr {
 /* farvede baggrunde med tekst */
 .graes {
     background-color: var(--graes);
-    color: var(--lys);
+    color: var(--moerk);
 }
 
 .violet {
@@ -213,8 +197,9 @@ hr {
     color: var(--lys);
 }
 
+/* Responsive billeder */
 img {
-    width: 100%;
+    max-width: 100%;
 }
 
 /* Layout */
@@ -325,7 +310,7 @@ Placer de responsive regler i slutningen af din CSS. Fordi: det er den sidste re
     }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 601px) {
     .flex2 {
         display: flex; /* flex: laver kolonner af kasse-elementerne */
     }

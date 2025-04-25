@@ -2,5 +2,8 @@
 
 Udkast og didaktiske prototyper til ny 1. semester Efterår 2025.
 
+## Designsystem
 
+## Landingpage
 
+## Liniefag: Akvarium

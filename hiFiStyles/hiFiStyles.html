@@ -12,17 +12,22 @@
         <h1>Designsystem: Landingpage</h1>
     </header>
 
+    <!-- Navigation -->
+     <nav>
+        <!-- Menuen tilføjes her, når vi når så langt -->
+     </nav>
+
     <main>
 
         <section id="intro">
 
-            <h2>Introduktion: Designsystemet og din landingpage</h2>
+            <h2>Designsystemet og din landingpage</h2>
 
-            <p>Designsystemet skaber de CSS og HTML "byggeklodser" du kan bruge, når dit design skal implementeres. Designsystemet skal udvikles før du begynder at bygge din landingpage. På denne måde kan du udvikle et konsistent design.</p>
+            <p>Når du har udviklet et design med skitser og styletiles skal det omsættes til et designsystem i HTML og CSS.</p>
 
-            <p>Når designsystemet er klar bliver det let at bygge websider ud fra wireframes.</p>
+            <p>Designsystemet skaber de CSS og HTML "byggeklodser" du kan bruge, når dit design skal implementeres. Designsystemet skal udvikles før du begynder at bygge din landingpage. På denne måde bliver det lettere at anvende et konsistent design i alle dine komponenter.</p>
 
-            <p>I HTML head sekstionen skal du tilføje:
+            <p>Designsystemets stylesheet kan bruges af flere sider. På de sider, der skal bruge designsystemet skal du linke til designsystemets stylesheet. Gør sådan i din editor:</p>
 
             <pre>
 &lt;link rel="stylesheet" href="css/style.css"&gt;
@@ -291,11 +296,18 @@
             -->
             <section id="billedeMedCTA">
                 <h2>Komponent: Billede med CTA</h2>
+
                 <aside id="knapPaaBillede">
-                    <div class="knap-centrer">
-                        <button class="graes">CTA</button>
-                    </div>
+                    <div class="lys w100">
+                    <h3 class="moerk">Overskrift</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam beatae nemo consectetur fuga inventore facilis quisquam voluptatem dicta.
+                            <div class="lys">
+                                <button class="graes">CTA</button>
+                            </div>
+                        </p>
+                </div>
                 </aside>
+            
             </section>
 
             <!-- Komponent: billede og tekst -->
@@ -303,7 +315,7 @@
                 <h2>Komponent: Billede og tekst</h2>
 
                 <article  id="billedeOgTekst" class="flex2">
-                    <div>
+                    <div class="lys">
                         <h2 class="venstre">Vir prudens</h2>
                         <p class="venstre">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                     </div>
@@ -312,6 +324,8 @@
                     </div>
                 </article>
             </section>
+
+            <!-- fortsæt med at bygge de nødvendige komponenter -->
     
     </main>
 

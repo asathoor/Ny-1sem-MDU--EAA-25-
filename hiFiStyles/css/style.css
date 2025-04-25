@@ -103,7 +103,8 @@ h1 {
     font-family: "Ribeye", serif;
     font-weight: 400;
     font-style: normal;
-    font-size: xx-large;
+    font-size: 3.61234rem;
+    color: var(--lys)
 }
 
 h2 {
@@ -197,6 +198,12 @@ hr {
     color: var(--lys);
 }
 
+.hero h3 {
+    position: relative;
+    font-size: 3rem;
+    top: 175px;
+}
+
 /* Responsive billeder */
 img {
     max-width: 100%;
@@ -254,6 +261,9 @@ button {
     background-image: url('https://multimusen.dk/wp-content/uploads/wizard-pc-04-1.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
+    width: 233px;
+    border: 3px solid var(--blaaGroen);
+    margin: auto;
 }
 
 #knapPaaBillede h3 {

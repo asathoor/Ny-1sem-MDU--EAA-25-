@@ -56,6 +56,8 @@ footer {
     padding-top: 6vh;
     text-align: center;
     margin-top: 76px;
+    background-color: var(--moerk);
+    color: var(--lys);
 }
 
 header {
@@ -206,7 +208,8 @@ hr {
 
 /* Responsive billeder */
 img {
-    max-width: 100%;
+    width: 100%;
+    height: auto;
 }
 
 /* Layout */

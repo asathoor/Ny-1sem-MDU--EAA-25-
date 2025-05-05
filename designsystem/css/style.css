@@ -1,0 +1,183 @@
+/** 
+* Fil: style.css
+* Formål: Forenklet designsystem til en eller flere landingpages
+*/
+
+/* importer fonts: google */
+@import url('https://fonts.googleapis.com/css2?family=Cal+Sans&family=Lacquer&family=Ribeye&display=swap');
+/* tip: spar en masse kodelinjer, brug @import som herover */
+
+/*
+Sådan bruges de tre fonte i klasser:
+
+.cal-sans-regular {
+  font-family: "Cal Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.ribeye-regular {
+  font-family: "Ribeye", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.lacquer-regular {
+  font-family: "Lacquer", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+*/
+
+/* Variabler */
+:root {
+    /* Farver */
+    --kontrast1: #9fed38;
+    --kontrast2: #389fed;
+    --kontrast3: #ed389f;
+    --moerke: #000;
+    --lys: #fff;
+
+    /* Standardfont */
+    --font: Verdana, Geneva, Tahoma, sans-serif;
+
+    /* Fontstørrelser */
+    
+    /* Respektafstand */
+    --whSp: 25px;
+    
+    /* Kolonnebredder */
+    --colBr_250: 250px;
+    --colBr_350: 350px;
+    --colBr_500: 500px;
+}
+
+body {
+    font-family: var(--font);
+}
+
+p {
+    width: 52ch;
+}
+
+/* Responsive billeder */
+img {
+    width: 100%;
+    height: auto;
+}
+
+/* Farveprøver */
+.kontrastSH {
+    color: var(--moerke);
+    background-color: var(--lys);
+}
+
+.kontrastHS {
+    color: var(--lys);
+    background-color: var(--moerke);
+}
+
+.lys_k1 {
+    color: var(--lys);
+    background-color: var(--kontrast1);
+}
+
+.moerk_k1 {
+    color: var(--moerke);
+    background-color: var(--kontrast1); 
+}
+
+/* etc. etc. */
+
+
+/* Google Fonts */
+.cal-sans-regular {
+    font-family: "Cal Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .ribeye-regular {
+    font-family: "Ribeye", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .lacquer-regular {
+    font-family: "Lacquer", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+
+/* Fonte */
+h1 {
+    font-family: "Ribeye", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h2 {
+    font-family: "Lacquer", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Overskrifter */
+h3, h4, h5, h6 {
+    font-family: "Cal Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Brødtekst */
+body {
+    font-family: var(--font);
+    font-size: medium;
+}
+
+/* Flexbox (kolonner) */
+/* Se: https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
+
+/* Lægger elementer vertikalt på række */
+.flex {
+    display: flex;
+    gap: var(--whSp);
+}
+
+/* Hvis der ikke er plads nok laves en ny række */
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+/* Elementerne centreres */
+.flex-justify-center {
+    justify-content: center;
+}
+
+/* Elementerne fordeles jævnt, første og sidste går til kant */
+.flex-space-between {
+    justify-content: space-between;
+}
+
+/* Elementer fordeles jævnt med respektafstand rund om */
+.flex-space-around {
+    justify-content: space-around;
+}
+/* lav flere classes til layout */
+
+/* lægger elementerne langs øverste linje */
+.flex-align-items-start {
+    align-items: start;
+}
+
+/* Strækker elementerne så de bliver lige store */
+.flex-align-items-stretch {
+    align-items: stretch;
+}
+
+/* Mellemrum mellem kolonnerne */
+.gap_whSp {
+    gap: var(--whSp);
+}

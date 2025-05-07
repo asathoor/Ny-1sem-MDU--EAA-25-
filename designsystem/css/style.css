@@ -6,92 +6,12 @@
 /* importer fonts: google */
 @import url('https://fonts.googleapis.com/css2?family=Cal+Sans&family=Lacquer&family=Ribeye&display=swap');
 /* tip: spar en masse kodelinjer, brug @import som herover */
+/* Meyer: Browser reset 
+* Fjerner browsernes indbyggede styles
 
-/*
-Sådan bruges de tre fonte i klasser:
-
-.cal-sans-regular {
-  font-family: "Cal Sans", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.ribeye-regular {
-  font-family: "Ribeye", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.lacquer-regular {
-  font-family: "Lacquer", system-ui;
-  font-weight: 400;
-  font-style: normal;
-}
+* Herunder: google fonts:
 
 */
-
-/* Variabler */
-:root {
-    /* Farver */
-    --kontrast1: #9fed38;
-    --kontrast2: #389fed;
-    --kontrast3: #ed389f;
-    --moerke: #000;
-    --lys: #fff;
-
-    /* Standardfont */
-    --font: Verdana, Geneva, Tahoma, sans-serif;
-
-    /* Fontstørrelser */
-    
-    /* Respektafstand */
-    --whSp: 25px;
-    
-    /* Kolonnebredder */
-    --colBr_250: 250px;
-    --colBr_350: 350px;
-    --colBr_500: 500px;
-}
-
-body {
-    font-family: var(--font);
-}
-
-p {
-    width: 52ch;
-}
-
-/* Responsive billeder */
-img {
-    width: 100%;
-    height: auto;
-}
-
-/* Farveprøver */
-.kontrastSH {
-    color: var(--moerke);
-    background-color: var(--lys);
-}
-
-.kontrastHS {
-    color: var(--lys);
-    background-color: var(--moerke);
-}
-
-.lys_k1 {
-    color: var(--lys);
-    background-color: var(--kontrast1);
-}
-
-.moerk_k1 {
-    color: var(--moerke);
-    background-color: var(--kontrast1); 
-}
-
-/* etc. etc. */
-
-
-/* Google Fonts */
 .cal-sans-regular {
     font-family: "Cal Sans", sans-serif;
     font-weight: 400;
@@ -109,32 +29,175 @@ img {
     font-weight: 400;
     font-style: normal;
   }
-
-
-/* Fonte */
-h1 {
-    font-family: "Ribeye", serif;
-    font-weight: 400;
-    font-style: normal;
+  
+  * {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
 }
 
-h2 {
-    font-family: "Lacquer", system-ui;
-    font-weight: 400;
-    font-style: normal;
+
+/* Variabler */
+:root {
+    /* Farver */
+    --kontrast1: #9fed38;
+    --kontrast2: #389fed;
+    --kontrast3: #ed389f;
+    --moerke: #000;
+    --lys: #fff;
+
+    /* Standardfont */
+    --font: Verdana, Geneva, Tahoma, sans-serif;
+
+    /* Fontstørrelser */
+    
+    /* Respektafstand */
+    --whSp: 3rem;
+    
+    /* Kolonnebredder */
+    --colBr_250: 250px;
+    --colBr_350: 350px;
+    --colBr_500: 500px;
 }
 
-/* Overskrifter */
-h3, h4, h5, h6 {
-    font-family: "Cal Sans", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-}
+/* HTML TAGS */
 
 /* Brødtekst */
 body {
     font-family: var(--font);
-    font-size: medium;
+    font-size: 110%;
+}
+
+button {
+    width: 150px;
+    border: 2px solid var(--moerke);
+    margin: var(--whSp);
+    padding: var(--whSp);
+    border-radius: 32px;
+}
+
+button:hover {
+    background-color: var(--kontrast3);
+}
+
+header, 
+footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+header h1 {
+    font-size: xx-large;
+}
+
+/* OVERSKRIFTER */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--kontrast3);
+    text-align: center;
+    margin-bottom: var(--whSp);
+}
+
+main {
+    padding-left: var(--whSp);
+    padding-right: var(--whSp);
+}
+
+/* Øvrige HTML elementer */
+p {
+    margin-top: var(--whSp);
+    max-width: 52ch;
+    margin-top: var(--whSp);
+    margin-bottom: var(--whSp);
+    margin: auto;
+}
+
+/* Responsive billeder */
+img {
+    width: 100%;
+    height: auto;
+}
+
+/* Layout klasser */
+
+/* Whitespace */
+.spacer {
+    width: var(--whSp);
+    height: var(--whSp);
+}
+
+/* Tekst placeringer */
+.centrer {
+    text-align: center;
+}
+
+/* Centrer element med fast bredde */
+.margin-auto {
+    margin: auto;
+}
+
+
+/* FARVER */
+
+/* font-farver */
+.font_kontrast1 {
+    color: var(--kontrast1);
+}
+
+.font_kontrast2 {
+    color: var(--kontrast2);
+}
+
+.font_kontrast3 {
+    color: var(--kontrast3);
+}
+
+.font_moerke {
+    color: var(--moerke);
+}
+
+.font_lys {
+    color: var(--lys);
+}
+
+/* Baggrunds-farver */
+.bg_kontrast1 {
+    background-color: var(--kontrast1);
+}
+
+.bg_kontrast2 {
+    background-color: var(--kontrast2);
+}
+
+.bg_kontrast3 {
+    background-color: var(--kontrast3);
+}
+
+.bg_moerke {
+    background-color: var(--moerke);
+}
+
+.bg_lys {
+    background-color: var(--lys);
+}
+
+/* Til firkanterne som demonstrerer farverne */
+.farveEx {
+    padding: 20px;
+    width: var(--colBr_250);
+}
+
+/* Kant */
+.kant {
+    border: 1px solid var(--moerke);
 }
 
 /* Flexbox (kolonner) */
@@ -156,9 +219,26 @@ body {
     justify-content: center;
 }
 
+/* Kolonnebredder */
+.w25pct {
+    width: 25%;
+}
+
+.w33pct {
+    width: 33%;
+}
+
+.w50pct {
+    width: 50%;
+}
+
 /* Elementerne fordeles jævnt, første og sidste går til kant */
 .flex-space-between {
     justify-content: space-between;
+}
+
+.flex-start {
+    justify-content: flex-start;
 }
 
 /* Elementer fordeles jævnt med respektafstand rund om */
@@ -181,3 +261,12 @@ body {
 .gap_whSp {
     gap: var(--whSp);
 }
+
+/*  Farvet kant til designtest / -debugging  
+    Praktisk når noget driller lidt.
+*/
+.test {
+    border: 1px solid red;
+}
+
+/* Videre: @media */

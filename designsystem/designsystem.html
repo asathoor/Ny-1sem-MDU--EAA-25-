@@ -4,44 +4,215 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- link rel="stylesheet" href="css/meyer.css" -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div id="omslag">
-        <header class="moerk_k1">
-            <h1>h1: Landingpage titel</h1>
-            <h2>Forenklet designsystem</h2>
-        </header>
+    <header class="bg_moerke">
+        <h1>Designsystem: Landingpage</h1>
+    </header>
 
         <main>
-            <!-- indhold her -->
-             <section class="flex flex-space-between">
+            <div class="spacer"></div>
+
+            <!-- kolonner -->
+             <section id="flexKolonner2" class="flex flex-space-around">
 
                 <article>
-                    <img src="https://multimusen.dk/wp-content/uploads/DALL%C2%B7E-2024-10-22-07.16.45-A-surreal-desert-landscape-under-a-pale-distorted-sky.-In-the-foreground-there-are-nude-human-figures-with-elongated-melting-forms-intertwined-and-1.webp" alt="Dall-e: Surrealistisk billede.">
-                </article>
+                    <h3>Designsystem: Landingpage</h3>
 
-                <article>
-                    <h3>Mere tekst</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id quas mollitia est modi voluptates deserunt! Et fuga culpa impedit sunt, minus necessitatibus, accusantium vel iure hic ipsam voluptatibus cumque id.</p>
-                </article>
+                    <ul>
+                        <li>Kolonner med flexbox</li>
+                        <li>Class="flex flex-space-around"</li>
+                    </ul>
 
-                <article><img src="https://multimusen.dk/wp-content/uploads/DALL%C2%B7E-2024-08-28-07.04.35-A-cartoon-style-image-featuring-a-Telecaster-guitar-and-an-Orange-Crush-35-RT-amplifier-by-the-sea.-The-scene-is-set-on-a-sandy-beach-with-gentle-wave-1.webp" alt="Telecaster og Orange forstærket v. Dall-e."></article>
-
-                <article>
-                    <h3>Noget tekst</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id quas mollitia est modi voluptates deserunt! Et fuga culpa impedit sunt, minus necessitatibus, accusantium vel iure hic ipsam voluptatibus cumque id.</p>
                 </article>
 
 
-             </section>
+                <article>
+                    <h3>Om designsystemet</h3>
+
+                    <ul>
+                        <li>Designsystem med genanvendelige klasser.</li>
+                        <li>Modulær kode.</li>
+                    </ul>
+                </article>
+
+            </section>
+
+            <!-- Fonte og typografi -->
+            <section id="fonte" class="flex-space-around">
+
+                <div class="spacer"></div>
+
+                <article>
+                
+                    <h2>Overskrifter og fonte</h2>
+
+                    <p>Eksempler på de anvendte fonte til overskrifter. Farver eller baggrunde ændres ved at tilføje den relevante klasse.</p>
+                    <div class="spacer"></div>
+                    
+                    <h2 class="cal-sans-regular">H2 - Class: cal-sans-regular</h2>
+                    <h2 class="ribeye-regular">H2 -class: ribeye-regular </h2>
+                    <h2 class="lacquer-regular">H2 - class lacquer-regular</h2>
+
+                    <h2>Overskrifter</h2>
+
+                    <h1>h1 Lorem</h1>
+                    <h2>h2 Lorem</h2>
+                    <h3>h3 Lorem</h3>
+                    <h4>h4 Lorem</h4>
+                    <h5>h5 Lorem</h5>
+                    <h6>h6 Lorem</h6>
+
+                
+                </article>
+
+            </section>
+
+            <!-- Farver -->
+            <section>
+                <h2>Farveprøver</h2>
+
+                <h3>Baggrunde</h3>
+
+                <div class="flex flex-wrap flex-start">
+                    <aside class="colbr_350 bg_kontrast1 farveEx kant">
+                        Class="bg_kontrast1"
+                    </aside>
+                    <aside class="colbr_350 bg_kontrast1 farveEx font_lys kant">
+                        Class="bg_kontrast1 font_lys"
+                    </aside>
+                    <aside class="colbr_350 bg_kontrast2  farveEx">
+                        Class="bg_kontrast1"
+                    </aside>
+                    <aside class="colbr_350 bg_kontrast2  farveEx font_lys kant">
+                        Class="bg_kontrast1"
+                    </aside>
+                    <aside class="colbr_350 bg_kontrast3  farveEx kant">
+                        Class="bg_kontrast3"
+                    </aside>
+                    <aside class="colbr_350 bg_kontrast3  farveEx font_lys kant">
+                        Class="bg_kontrast3"
+                    </aside>
+                    <aside class="colbr_350 bg_moerke font_lys  farveEx kant">
+                        Class="bg_kontrast1 font_lys"
+                    </aside>
+                    <aside class="colbr_350 bg_lys  farveEx kant">
+                        Class="bg_kontrast1"
+                    </aside>
+                </div>
+                <div class="spacer"></div>
+            </section>
+
+            <section id="knapper">
+                <h2>Knapper</h2>
+
+                <p>Knapperne sættes med de samme farver:</p>
+
+                <button class="bg_kontrast1">CTA</button>
+                <button class="bg_kontrast2">CTA</button>
+                <button class="bg_kontrast3">CTA</button>
+                <button class="bg_lys">CTA</button>
+                <button class="bg_moerke font_lys">CTA</button>
+
+                <div class="spacer"></div>
+            </section>
+
+            <section id="billeder">
+                <h2 id="billeder">Billeder</h2>
+                <p>Billeder har generelt bredden 100%. Det gør dem responsive, så de automatisk tilpasser sig den bredde der er til rådighed.</p>
+
+                <h3>Responsivt Galleri</h3>
+
+                <aside class="flex flex-wrap flex-space-around bg_moerke">
+
+                    <!-- billeder i galleri -->
+                    <img 
+                        src="https://multimusen.dk/wp-content/uploads/DALL%C2%B7E-2024-08-28-07.04.35-A-cartoon-style-image-featuring-a-Telecaster-guitar-and-an-Orange-Crush-35-RT-amplifier-by-the-sea.-The-scene-is-set-on-a-sandy-beach-with-gentle-wave-1.webp" 
+                        alt="Telecaster og Orange-forstærker v. Dall-e" 
+                        class="farveEx">
+                    
+                        <img 
+                        src="https://multimusen.dk/wp-content/uploads/DALL%C2%B7E-2024-08-28-07.04.35-A-cartoon-style-image-featuring-a-Telecaster-guitar-and-an-Orange-Crush-35-RT-amplifier-by-the-sea.-The-scene-is-set-on-a-sandy-beach-with-gentle-wave-1.webp" 
+                        alt="Telecaster og Orange-forstærker v. Dall-e" 
+                        class="farveEx">
+
+                        <img 
+                        src="https://multimusen.dk/wp-content/uploads/DALL%C2%B7E-2024-08-28-07.04.35-A-cartoon-style-image-featuring-a-Telecaster-guitar-and-an-Orange-Crush-35-RT-amplifier-by-the-sea.-The-scene-is-set-on-a-sandy-beach-with-gentle-wave-1.webp" 
+                        alt="Telecaster og Orange-forstærker v. Dall-e" 
+                        class="farveEx">
+
+                        <img 
+                        src="https://multimusen.dk/wp-content/uploads/DALL%C2%B7E-2024-08-28-07.04.35-A-cartoon-style-image-featuring-a-Telecaster-guitar-and-an-Orange-Crush-35-RT-amplifier-by-the-sea.-The-scene-is-set-on-a-sandy-beach-with-gentle-wave-1.webp" 
+                        alt="Telecaster og Orange-forstærker v. Dall-e" 
+                        class="farveEx">
+
+                        <img 
+                        src="https://multimusen.dk/wp-content/uploads/DALL%C2%B7E-2024-08-28-07.04.35-A-cartoon-style-image-featuring-a-Telecaster-guitar-and-an-Orange-Crush-35-RT-amplifier-by-the-sea.-The-scene-is-set-on-a-sandy-beach-with-gentle-wave-1.webp" 
+                        alt="Telecaster og Orange-forstærker v. Dall-e" 
+                        class="farveEx">
+
+                        <img 
+                        src="https://multimusen.dk/wp-content/uploads/DALL%C2%B7E-2024-08-28-07.04.35-A-cartoon-style-image-featuring-a-Telecaster-guitar-and-an-Orange-Crush-35-RT-amplifier-by-the-sea.-The-scene-is-set-on-a-sandy-beach-with-gentle-wave-1.webp" 
+                        alt="Telecaster og Orange-forstærker v. Dall-e" 
+                        class="farveEx">
+                </aside>
+            </section>
+
+            <!-- Eksempeler på layout komponenter -->
+
+            <!-- Tekst og billede -->
+            <section id="billedeOgTekst">
+                <div class="spacer"></div>
+                <div class="flex">
+                    <article class="w50pct">
+                        <h2>Tekst og billede</h2>
+                        <p>Class: flex. Billede og tekst står side om side.</p>
+                        <p>Både billede og tekst bruger classen: w50pct.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore eligendi mollitia esse commodi dolor ut magnam ipsum dolore aperiam veniam possimus vel aspernatur soluta quam, quis voluptatem quos obcaecati! Magnam!</p>
+                    </article>
+
+                    <article class="w50pct">
+                        <img 
+                            src="https://multimusen.dk/wp-content/uploads/DALL%C2%B7E-2024-08-28-07.04.35-A-cartoon-style-image-featuring-a-Telecaster-guitar-and-an-Orange-Crush-35-RT-amplifier-by-the-sea.-The-scene-is-set-on-a-sandy-beach-with-gentle-wave-1.webp" 
+                            alt="Telecaster og Orange-forstærker v. Dall-e">
+                    </article>
+                </div>
+            </section>
+
+            <!-- Billede og tekst -->
+            <section id="billedeOgTekst">
+                <div class="spacer"></div>
+                <div class="flex">
+
+                    <article class="w25pct">
+                        <img 
+                            src="https://multimusen.dk/wp-content/uploads/DALL%C2%B7E-2024-08-28-07.04.35-A-cartoon-style-image-featuring-a-Telecaster-guitar-and-an-Orange-Crush-35-RT-amplifier-by-the-sea.-The-scene-is-set-on-a-sandy-beach-with-gentle-wave-1.webp" 
+                            alt="Telecaster og Orange-forstærker v. Dall-e">
+                    </article>
+
+                    <article class="w50pct">
+                        <h2>Billede og tekst</h2>
+                        <p>Tekst Class: w50pct</p>
+                        <p>Billedet Class: w25pct</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore eligendi mollitia esse commodi dolor ut magnam ipsum dolore aperiam veniam possimus vel aspernatur soluta quam, quis voluptatem quos obcaecati! Magnam!</p>
+                    </article>
+                </div>
+            </section>
+
+            <div class="spacer"></div>
+
         </main>
 
-        <footer class="moerk_k1">
-            &copy; Landingpage Designsystem <br>
-            Per Thykjær Jensen, 2025
+        <!-- Footere-->
+        <footer class="bg_moerke font_lys">
+            <p class="margin-auto centrer">
+                &copy; Landingpage Designsystem <br>
+                Per Thykjær Jensen, 2025
+            </p>
         </footer>
-    </div>
+
 
     <!-- Placer JavaScript nederst på siden -->
      <script src="js/js.js"></script>

@@ -7,3 +7,7 @@ Udkast og didaktiske prototyper til ny 1. semester Efterår 2025.
 ## Landingpage
 
 ## Liniefag: Akvarium
+
+## Framework:
+
+Måske [Tailwind](https://tailwindcss.com/) er et godt framework for 1. sem.
